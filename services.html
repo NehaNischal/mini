@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Mini Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+
+        
+        .service-detail-section {
+            padding: 80px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .service-detail-section:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .service-detail-section:nth-child(even) .service-detail-grid {
+            direction: rtl;
+        }
+        .service-detail-section:nth-child(even) .service-detail-content {
+            direction: ltr;
+        }
+        .service-detail-content h3 {
+            font-size: 2.25rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .service-detail-content h3 i {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+        .service-detail-image img {
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">M<span>E</span></a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="menu-toggle" id="menuToggle">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="inner-hero" style="--hero-bg: url('images/team-overview.png');">
+        <h1 data-aos="zoom-in">Our Expert Services</h1>
+    </div>
+
+    <!-- Services Detailed Breakdown -->
+    <section style="padding: 0;">
+        
+        <!-- 1. Rubber Lining -->
+        <div class="service-detail-section" id="service-1">
+            <div class="container service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <h3><i data-lucide="layers"></i> Rubber Lining & Moulding</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-weight: 500;">
+                        Rubber lining for all process industries with natural and synthetic Rubbers both at our works & at Client's Site. We have different formulae for various types of rubber lining, both hot bonding and cold bonding.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-weight: 500; margin-top: 15px;">
+                        Our experienced team ensures precise installation and finishing to meet strict industry standards and project specifications.
+                    </p>
+                    <a href="rubber-lining.html" class="btn btn-primary" style="margin-top: 25px;">View Full Details</a>
+                </div>
+                <div class="service-detail-image" data-aos="fade-left">
+                    <img src="images/rubber-lining.png" alt="Rubber Lining">
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Guniting -->
+        <div class="service-detail-section" id="service-2">
+            <div class="container service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <h3><i data-lucide="droplet"></i> Guniting & Pressure Grouting</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-weight: 500;">
+                        Our guniting services involve the application of high-strength concrete or mortar using specialized spraying equipment to repair and reinforce weakened surfaces.
+                    </p>
+                    <a href="guniting-grouting.html" class="btn btn-primary" style="margin-top: 25px;">View Full Details</a>
+                </div>
+                <div class="service-detail-image" data-aos="fade-left">
+                    <img src="images/guniting.png" alt="Guniting">
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Sand Blasting -->
+        <div class="service-detail-section" id="service-3">
+            <div class="container service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <h3><i data-lucide="wind"></i> Sand Blasting & Coatings</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-weight: 500;">
+                        Heavy duty sand blasting and protective coating services for steel and concrete structures in industrial environments.
+                    </p>
+                    <a href="sand-blasting.html" class="btn btn-primary" style="margin-top: 25px;">View Full Details</a>
+                </div>
+                <div class="service-detail-image" data-aos="fade-left">
+                    <img src="images/sand-blasting.png" alt="Sand Blasting">
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. FRP Lining -->
+        <div class="service-detail-section" id="service-4">
+            <div class="container service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <h3><i data-lucide="shield-check"></i> FRP Lining & Moulding</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-weight: 500;">
+                        Fiberglass Reinforced Plastic lining for superior chemical resistance and structural enhancement.
+                    </p>
+                    <a href="frp-lining.html" class="btn btn-primary" style="margin-top: 25px;">View Full Details</a>
+                </div>
+                <div class="service-detail-image" data-aos="fade-left">
+                    <img src="images/frp-lining.png" alt="FRP Lining">
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Rehab -->
+        <div class="service-detail-section" id="service-5">
+            <div class="container service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <h3><i data-lucide="building-2"></i> Rehabilitation Works</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-weight: 500;">
+                        Specialized rehabilitation of dams, bridges, and industrial structures with modern engineering technology.
+                    </p>
+                    <a href="rehabilitation-works.html" class="btn btn-primary" style="margin-top: 25px;">View Full Details</a>
+                </div>
+                <div class="service-detail-image" data-aos="fade-left">
+                    <img src="images/rehabilitation.png" alt="Rehabilitation">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mini Enterprises. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

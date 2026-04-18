@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Mini Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--accent);
+            border: 4px solid var(--white);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left { left: 0; text-align: right; }
+        .right { left: 50%; }
+        .right::after { left: -10px; }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .mv-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border-top: 5px solid var(--accent);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .mv-card:hover {
+            transform: translateY(-10px);
+            background-color: #0a1f44 !important; /* Ensure deep blue */
+            border-top-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(10, 31, 68, 0.4), 0 0 20px rgba(59, 130, 246, 0.3); /* Blue shadow */
+        }
+        .mv-card h3 {
+            margin-bottom: 15px;
+            color: #0a1f44;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+        .mv-card p {
+            color: #475569;
+            transition: var(--transition);
+        }
+        .mv-card:hover h3, .mv-card:hover p {
+            color: #ffffff !important;
+        }
+        .mv-card i {
+            transition: var(--transition);
+        }
+        .mv-card:hover i {
+            color: #ffffff !important;
+        }
+        
+        .team-structure {
+            background-color: #f1f5f9;
+        }
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .org-level {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .org-member {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
+            font-weight: 700;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .org-member span {
+            display: block;
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">M<span>E</span></a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+
+                <div class="menu-toggle" id="menuToggle">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="inner-hero" style="--hero-bg: url('images/team-overview.png');">
+        <h1 data-aos="zoom-in">Company Overview</h1>
+    </div>
+
+    <!-- Company Overview -->
+    <section class="section-light">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="section-header" style="text-align: left;">
+                        <span>Legacy of 45+ Years</span>
+                        <h2>Experts in Industrial Engineering</h2>
+                    </div>
+                    <p>Mini Enterprises, established in 1977, is a professionally managed engineering company run by highly qualified professionals with over 45 years of proven experience in executing specialized engineering works. Since our inception, we have successfully undertaken a wide range of contract works, mainly serving the public sector and major industrial organizations with reliability and technical excellence.</p>
+
+                    <p>We undertake a wide range of engineering and specialized activities and are fully equipped with modern equipment required for blasting, rubber lining, and other specialized operations. With our own in-house manufacturing unit, we maintain strict quality standards and ensure dependable project execution. Today, in 2026, we proudly serve major Central and State Government undertakings and leading industries, including FACT Ltd, VSSC/ISRO, IREL Ltd, TCC Ltd, refineries, and many other reputed organizations. With decades of expertise and a strong commitment to quality, safety, and professional excellence, MINI ENTERPRISES continues to deliver trusted engineering services that meet the highest industry standards.</p>
+                </div>
+                <div class="about-img" data-aos="fade-left">
+                    <img src="images/oil-refinery-about.png" style="box-shadow: -20px 20px 0 var(--primary);">
+                </div>
+            </div>
+            
+            <div class="mission-vision" style="margin-top: 80px;">
+                <div class="mv-card" data-aos="fade-up">
+                    <i data-lucide="target" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 20px;"></i>
+                    <h3>OUR MISSION</h3>
+                    <p>To provide high-quality engineering services that exceed client expectations through innovation, dedication, and a relentless focus on safety and precision.</p>
+                </div>
+                <div class="mv-card" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="eye" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 20px;"></i>
+                    <h3>OUR VISION</h3>
+                    <p>To be the most trusted and reliable name in structural rehabilitation and industrial protective works globally, setting new benchmarks for engineering excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">M<span>E</span></a>
+                    <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
+                    <div class="social-icons">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Civil Works</a></li>
+                        <li><a href="services.html">Rubber Lining</a></li>
+                        <li><a href="services.html">FRP Lining</a></li>
+                        <li><a href="services.html">Sand Blasting</a></li>
+                        <li><a href="services.html">Pressure Grouting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <span>minienterps@gmail.com</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <span>+91 984 624 3535</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Mini Enterprises. All Rights Reserved. Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919846243535" class="whatsapp-btn">
+        <i data-lucide="message-circle"></i>
+    </a>
+    <button class="back-to-top" id="backToTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

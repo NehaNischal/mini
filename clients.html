@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clients | Mini Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .inner-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(10, 31, 68, 0.8), rgba(10, 31, 68, 0.8)), url('images/team-overview.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding-top: 100px;
+        }
+        .inner-hero h1 { color: white; font-size: 3.5rem; text-align: center; }
+        
+        .client-grid-page {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .client-item-page {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            width: calc(33.333% - 20px);
+            min-width: 300px;
+            flex-grow: 0;
+        }
+        .client-item-page h3, .client-item-page p, .client-item-page i {
+            transition: var(--transition);
+        }
+        .client-item-page:hover { 
+            transform: translateY(-8px); 
+            background-color: var(--primary); 
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(10, 31, 68, 0.25);
+            animation: jiggle 0.3s ease-in-out;
+        }
+
+        @keyframes jiggle {
+            0% { transform: translateY(-8px) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(-1deg); }
+            50% { transform: translateY(-8px) rotate(1deg); }
+            75% { transform: translateY(-8px) rotate(-1deg); }
+            100% { transform: translateY(-8px) rotate(0deg); }
+        }
+        .client-item-page h3 { font-size: 1.1rem; color: var(--primary); font-weight: 700; margin-top: 15px; }
+        .client-item-page i { font-size: 2rem; color: var(--accent); opacity: 0.8; }
+        
+        /* Hover theme overrides */
+        .client-item-page:hover h3 { color: white; }
+        .client-item-page:hover p { color: rgba(255, 255, 255, 0.8) !important; }
+        .client-item-page:hover i { opacity: 1; }
+        
+        .category-title {
+            margin: 60px 0 30px;
+            padding-left: 20px;
+            border-left: 5px solid var(--accent);
+            font-size: 1.75rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">M<span>E</span></a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="clients.html" class="active">Clients</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+
+                <div class="menu-toggle" id="menuToggle">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="inner-hero">
+        <h1 data-aos="zoom-in">Our Valued Clients</h1>
+    </div>
+
+    <section class="section-light">
+        <div class="container">
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem;">Over the last 45 years, Mini Enterprises has built strong partnerships with government departments and major industrial organizations through reliable engineering solutions.</p>
+
+            <h2 class="category-title" data-aos="fade-right">Our Esteemed Clients</h2>
+            <div class="client-grid-page" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                
+                <div class="client-item-page" data-aos="fade-up">
+                    <i data-lucide="rocket"></i>
+                    <h3>Vikram Sarabhai Space Center</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Dept of Space, Govt of India</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="50">
+                    <i data-lucide="flask-conical"></i>
+                    <h3>The Fertilisers and Chemicals Travancore Ltd</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of India</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="gem"></i>
+                    <h3>Indian Rare Earths Ltd</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Rare Earth Division, Govt of India</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="150">
+                    <i data-lucide="leaf"></i>
+                    <h3>Hindustan Insecticides Ltd</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of India</p>
+                </div>
+                
+
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="50">
+                    <i data-lucide="flask-round"></i>
+                    <h3>The Travancore Cochin Chemicals Ltd</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of Kerala</p>
+                </div>
+                
+
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="150">
+                    <i data-lucide="fuel"></i>
+                    <h3>BPCL Refinery</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Cochin</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up">
+                    <i data-lucide="droplets"></i>
+                    <h3>Kaveri Neeravari Nigam Ltd</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of Karnataka</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="50">
+                    <i data-lucide="file-text"></i>
+                    <h3>Mysore Paper Mills Ltd</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of Karnataka</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="plane"></i>
+                    <h3>Naval Aircraft Yard</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of India</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="150">
+                    <i data-lucide="map"></i>
+                    <h3>National Highway Authority of India</h3>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up">
+                    <i data-lucide="building-2"></i>
+                    <h3>Nitta Gelatin India Ltd</h3>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="50">
+                    <i data-lucide="ship"></i>
+                    <h3>Inland Water Transport Company</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Elamkulam, Kerala</p>
+                </div>
+                
+
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="150">
+                    <i data-lucide="hard-hat"></i>
+                    <h3>The Malabar Cements Ltd</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of Kerala</p>
+                </div>
+
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="fuel"></i>
+                    <h3>Reliance Industries Limited</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Refining & Marketing Division</p>
+                </div>
+                
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="250">
+                    <i data-lucide="droplet"></i>
+                    <h3>Indian Oil Corporation (IOCL)</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Kochi Section</p>
+                </div>
+
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="300">
+                    <i data-lucide="flame"></i>
+                    <h3>HPCL - Mittal Energy Limited</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Industrial Protective Services</p>
+                </div>
+
+                <div class="client-item-page" data-aos="fade-up" data-aos-delay="350">
+                    <i data-lucide="container"></i>
+                    <h3>Mangalore Refinery & MRPL</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; font-weight: 600;">Govt of India Enterprise</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">M<span>E</span></a>
+                    <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
+                    <div class="social-icons">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Civil Works</a></li>
+                        <li><a href="services.html">Rubber Lining</a></li>
+                        <li><a href="services.html">FRP Lining</a></li>
+                        <li><a href="services.html">Sand Blasting</a></li>
+                        <li><a href="services.html">Pressure Grouting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <span>minienterps@gmail.com</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <span>+91 984 624 3535</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Mini Enterprises. All Rights Reserved. Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919846243535" class="whatsapp-btn">
+        <i data-lucide="message-circle"></i>
+    </a>
+    <button class="back-to-top" id="backToTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

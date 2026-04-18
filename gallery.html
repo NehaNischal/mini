@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Mini Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item::after {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(249, 115, 22, 0.9);
+            color: white;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .gallery-item:hover::after { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+        
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .gallery-filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+        .gallery-filter-btn:hover, .gallery-filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">M<span>E</span></a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+
+                <div class="menu-toggle" id="menuToggle">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="inner-hero" style="--hero-bg: url('images/team-overview.png');">
+        <h1 data-aos="zoom-in">Visual Showcase</h1>
+    </div>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="gallery-filter" data-aos="fade-up">
+                <button class="gallery-filter-btn active">All Works</button>
+                <button class="gallery-filter-btn">Construction</button>
+                <button class="gallery-filter-btn">Restoration</button>
+                <button class="gallery-filter-btn">Rubber Lining</button>
+                <button class="gallery-filter-btn">Industrial</button>
+                <button class="gallery-filter-btn">Repair</button>
+            </div>
+
+            <div class="gallery-grid">
+                <a data-fslightbox="gallery" href="industrial_refinery_complex_1775752773133.png" class="gallery-item" data-aos="fade-up">
+                    <img src="industrial_refinery_complex_1775752773133.png" alt="Industrial Refinery Complex">
+                </a>
+                <a data-fslightbox="gallery" href="chemical_processing_plant_1775752802091.png" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="chemical_processing_plant_1775752802091.png" alt="Chemical Processing Plant">
+                </a>
+                <a data-fslightbox="gallery" href="industrial_gas_terminal_1775752832160.png" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="industrial_gas_terminal_1775752832160.png" alt="Gas Terminal Facility">
+                </a>
+                <a data-fslightbox="gallery" href="refinery_pipeline_infrastructure_1775752862466.png" class="gallery-item" data-aos="fade-up">
+                    <img src="refinery_pipeline_infrastructure_1775752862466.png" alt="Refinery Pipeline Infrastructure">
+                </a>
+                <a data-fslightbox="gallery" href="images/guniting (1).jpeg" class="gallery-item" data-aos="fade-up">
+                    <img src="images/guniting (1).jpeg" alt="Structural Guniting Project">
+                </a>
+                <a data-fslightbox="gallery" href="images/guniting (2).jpeg" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/guniting (2).jpeg" alt="Dam Reinforcement">
+                </a>
+                <a data-fslightbox="gallery" href="images/guniting (3).jpeg" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/guniting (3).jpeg" alt="High Pressure Concrete Work">
+                </a>
+                <a data-fslightbox="gallery" href="images/sand-blasting.png" class="gallery-item" data-aos="fade-up">
+                    <img src="images/sand-blasting.png" alt="Industrial Sand Blasting">
+                </a>
+                <a data-fslightbox="gallery" href="images/rubber-lining.png" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/rubber-lining.png" alt="Specialized Rubber Lining">
+                </a>
+                <a data-fslightbox="gallery" href="images/frp-lining.png" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/frp-lining.png" alt="FRP Lining Solutions">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">M<span>E</span></a>
+                    <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
+                    <div class="social-icons">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Civil Works</a></li>
+                        <li><a href="services.html">Rubber Lining</a></li>
+                        <li><a href="services.html">FRP Lining</a></li>
+                        <li><a href="services.html">Sand Blasting</a></li>
+                        <li><a href="services.html">Pressure Grouting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <span>minienterps@gmail.com</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <span>+91 984 624 3535</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Mini Enterprises. All Rights Reserved. Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919846243535" class="whatsapp-btn">
+        <i data-lucide="message-circle"></i>
+    </a>
+    <button class="back-to-top" id="backToTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- FSLightbox Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
