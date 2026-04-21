@@ -10,9 +10,7 @@
     <style>
         .service-hero {
             height: 60vh;
-            background: linear-gradient(rgba(10, 31, 68, 0.8), rgba(10, 31, 68, 0.8)), url('images/sand-blasting.png');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #020617 0%, #0a1f44 50%, #172554 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,7 +31,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+
                     <li><a href="clients.html">Clients</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -45,7 +43,7 @@
         </div>
     </header>
 
-    <div class="service-hero" style="--hero-bg: url('images/sand-blasting.png');">
+    <div class="service-hero">
         <div class="container">
             <h1 data-aos="zoom-in">Sand Blasting & Specialized Coatings</h1>
             <p data-aos="fade-up" style="font-size: 1.25rem; max-width: 800px; margin: 20px auto;">Surface preparation and protection against corrosion and environmental decay.</p>
@@ -68,13 +66,13 @@
                 <h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 40px; text-align: center; font-weight: 700;">Project Implementation Gallery</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
                     <div data-aos="fade-right" style="overflow: hidden; border-radius: 15px; height: 300px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-                        <img src="sandblasting (1).jpeg" alt="Sand Blasting Implementation 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: contrast(1.05) brightness(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="images/gallery/sandblasting-1.jpeg" alt="Sand Blasting Implementation 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: contrast(1.05) brightness(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
                     <div data-aos="fade-up" style="overflow: hidden; border-radius: 15px; height: 300px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-                        <img src="sandblasting (2).jpeg" alt="Sand Blasting Implementation 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: contrast(1.05) brightness(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="images/gallery/sandblasting-2.jpeg" alt="Sand Blasting Implementation 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: contrast(1.05) brightness(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
                     <div data-aos="fade-left" style="overflow: hidden; border-radius: 15px; height: 300px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-                        <img src="sandblasting (3).jpeg" alt="Sand Blasting Implementation 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: contrast(1.05) brightness(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="images/gallery/sandblasting-3.jpeg" alt="Sand Blasting Implementation 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: contrast(1.05) brightness(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
                 </div>
             </div>
@@ -85,9 +83,66 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-about">
+                <!-- Brand Column -->
+                <div class="footer-brand" data-aos="fade-up">
                     <a href="index.html" class="logo">M<span>E</span></a>
                     <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
+                    <div class="footer-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul>
+                        <li><a href="rehabilitation-works.html">Civil Works</a></li>
+                        <li><a href="rubber-lining.html">Rubber Lining</a></li>
+                        <li><a href="frp-lining.html">FRP Lining</a></li>
+                        <li><a href="sand-blasting.html">Sand Blasting</a></li>
+                        <li><a href="guniting-grouting.html">Pressure Grouting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Column -->
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul>
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <span>minienterps@gmail.com</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <span>+91 984 624 3535</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mini Enterprises. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Services</a>
                 </div>
             </div>
         </div>

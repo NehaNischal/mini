@@ -37,13 +37,35 @@
             align-items: center;
             gap: 15px;
         }
+        /* Style for dark sections (odd children) */
+        .service-detail-section {
+            background-color: var(--bg-dark);
+            color: var(--white);
+        }
+        .service-detail-section:nth-child(odd) .service-detail-content h3 {
+            color: var(--white);
+        }
+        .service-detail-section:nth-child(odd) .service-detail-content p {
+            color: var(--text-muted);
+        }
+        /* Style for light sections (even children) */
+        .service-detail-section:nth-child(even) {
+            background-color: #f8fafc;
+            color: var(--primary);
+        }
+        .service-detail-section:nth-child(even) .service-detail-content h3 {
+            color: var(--primary);
+        }
+        .service-detail-section:nth-child(even) .service-detail-content p {
+            color: var(--primary-light);
+        }
         .service-detail-content h3 i {
             color: var(--accent);
             font-size: 2rem;
         }
         .service-detail-image img {
             border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -58,7 +80,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+
                     <li><a href="clients.html">Clients</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -72,7 +94,7 @@
         </div>
     </header>
 
-    <div class="inner-hero" style="--hero-bg: url('images/team-overview.png');">
+    <div class="inner-hero">
         <h1 data-aos="zoom-in">Our Expert Services</h1>
     </div>
 
@@ -167,7 +189,69 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Mini Enterprises. All Rights Reserved.</p>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand" data-aos="fade-up">
+                    <a href="index.html" class="logo">M<span>E</span></a>
+                    <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
+                    <div class="footer-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul>
+                        <li><a href="rehabilitation-works.html">Civil Works</a></li>
+                        <li><a href="rubber-lining.html">Rubber Lining</a></li>
+                        <li><a href="frp-lining.html">FRP Lining</a></li>
+                        <li><a href="sand-blasting.html">Sand Blasting</a></li>
+                        <li><a href="guniting-grouting.html">Pressure Grouting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Column -->
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul>
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <span>minienterps@gmail.com</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <span>+91 984 624 3535</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mini Enterprises. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Services</a>
+                </div>
+            </div>
         </div>
     </footer>
 

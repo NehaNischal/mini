@@ -152,4 +152,35 @@ document.addEventListener('DOMContentLoaded', () => {
             counterObserver.observe(counter);
         });
     }
+
+    // Gallery Filtering Logic
+    const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        // Trigger AOS refresh optionally if needed, but display block is usually enough
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Refresh Lightbox if needed (fslightbox usually handles it or might need refresh)
+                if (window.refreshFsLightbox) {
+                    window.refreshFsLightbox();
+                }
+            });
+        });
+    }
 });

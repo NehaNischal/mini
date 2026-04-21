@@ -10,9 +10,7 @@
     <style>
         .service-hero {
             height: 60vh;
-            background: linear-gradient(rgba(10, 31, 68, 0.8), rgba(10, 31, 68, 0.8)), url('images/rehabilitation.png');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #020617 0%, #0a1f44 50%, #172554 100%); /!* Global Hero Gradient *!/
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,7 +31,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+
                     <li><a href="clients.html">Clients</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -63,9 +61,66 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-about">
+                <!-- Brand Column -->
+                <div class="footer-brand" data-aos="fade-up">
                     <a href="index.html" class="logo">M<span>E</span></a>
                     <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
+                    <div class="footer-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul>
+                        <li><a href="rehabilitation-works.html">Civil Works</a></li>
+                        <li><a href="rubber-lining.html">Rubber Lining</a></li>
+                        <li><a href="frp-lining.html">FRP Lining</a></li>
+                        <li><a href="sand-blasting.html">Sand Blasting</a></li>
+                        <li><a href="guniting-grouting.html">Pressure Grouting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Column -->
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul>
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <span>minienterps@gmail.com</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <span>+91 984 624 3535</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mini Enterprises. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Services</a>
                 </div>
             </div>
         </div>

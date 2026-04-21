@@ -29,25 +29,7 @@
             transition: var(--transition);
         }
         .gallery-item:hover img { transform: scale(1.1); }
-        .gallery-item::after {
-            content: '+';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(249, 115, 22, 0.9);
-            color: white;
-            font-size: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            opacity: 0;
-            transition: var(--transition);
-        }
-        .gallery-item:hover::after { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+
         
         .gallery-filter {
             display: flex;
@@ -83,7 +65,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+
                     <li><a href="clients.html">Clients</a></li>
                     <li><a href="gallery.html" class="active">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -98,52 +80,81 @@
         </div>
     </header>
 
-    <div class="inner-hero" style="--hero-bg: url('images/team-overview.png');">
+    <div class="inner-hero">
         <h1 data-aos="zoom-in">Visual Showcase</h1>
     </div>
 
     <section class="section-light">
         <div class="container">
-            <div class="gallery-filter" data-aos="fade-up">
-                <button class="gallery-filter-btn active">All Works</button>
-                <button class="gallery-filter-btn">Construction</button>
-                <button class="gallery-filter-btn">Restoration</button>
-                <button class="gallery-filter-btn">Rubber Lining</button>
-                <button class="gallery-filter-btn">Industrial</button>
-                <button class="gallery-filter-btn">Repair</button>
-            </div>
 
-            <div class="gallery-grid">
-                <a data-fslightbox="gallery" href="industrial_refinery_complex_1775752773133.png" class="gallery-item" data-aos="fade-up">
-                    <img src="industrial_refinery_complex_1775752773133.png" alt="Industrial Refinery Complex">
-                </a>
-                <a data-fslightbox="gallery" href="chemical_processing_plant_1775752802091.png" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="chemical_processing_plant_1775752802091.png" alt="Chemical Processing Plant">
-                </a>
-                <a data-fslightbox="gallery" href="industrial_gas_terminal_1775752832160.png" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="industrial_gas_terminal_1775752832160.png" alt="Gas Terminal Facility">
-                </a>
-                <a data-fslightbox="gallery" href="refinery_pipeline_infrastructure_1775752862466.png" class="gallery-item" data-aos="fade-up">
-                    <img src="refinery_pipeline_infrastructure_1775752862466.png" alt="Refinery Pipeline Infrastructure">
-                </a>
-                <a data-fslightbox="gallery" href="images/guniting (1).jpeg" class="gallery-item" data-aos="fade-up">
-                    <img src="images/guniting (1).jpeg" alt="Structural Guniting Project">
-                </a>
-                <a data-fslightbox="gallery" href="images/guniting (2).jpeg" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/guniting (2).jpeg" alt="Dam Reinforcement">
-                </a>
-                <a data-fslightbox="gallery" href="images/guniting (3).jpeg" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/guniting (3).jpeg" alt="High Pressure Concrete Work">
-                </a>
-                <a data-fslightbox="gallery" href="images/sand-blasting.png" class="gallery-item" data-aos="fade-up">
-                    <img src="images/sand-blasting.png" alt="Industrial Sand Blasting">
-                </a>
-                <a data-fslightbox="gallery" href="images/rubber-lining.png" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/rubber-lining.png" alt="Specialized Rubber Lining">
-                </a>
-                <a data-fslightbox="gallery" href="images/frp-lining.png" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/frp-lining.png" alt="FRP Lining Solutions">
-                </a>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Industrial / Sandblasting -->
+                <div class="gallery-item" data-category="industrial" data-aos="zoom-in-up">
+                    <a data-fslightbox="gallery" href="images/gallery/sandblasting-1.jpeg">
+                        <img src="images/gallery/sandblasting-1.jpeg" alt="Industrial Sandblasting 1">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="industrial" data-aos="zoom-in-up" data-aos-delay="100">
+                    <a data-fslightbox="gallery" href="images/gallery/sandblasting-2.jpeg">
+                        <img src="images/gallery/sandblasting-2.jpeg" alt="Industrial Sandblasting 2">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="industrial" data-aos="zoom-in-up" data-aos-delay="200">
+                    <a data-fslightbox="gallery" href="images/gallery/sandblasting-3.jpeg">
+                        <img src="images/gallery/sandblasting-3.jpeg" alt="Industrial Sandblasting 3">
+                    </a>
+                </div>
+
+                <!-- Rubber Lining -->
+                <div class="gallery-item" data-category="rubber-lining" data-aos="zoom-in-up">
+                    <a data-fslightbox="gallery" href="images/gallery/rubber-lining-1.jpeg">
+                        <img src="images/gallery/rubber-lining-1.jpeg" alt="Rubber Lining Project 1">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="rubber-lining" data-aos="zoom-in-up" data-aos-delay="100">
+                    <a data-fslightbox="gallery" href="images/gallery/rubber-lining-2.jpeg">
+                        <img src="images/gallery/rubber-lining-2.jpeg" alt="Rubber Lining Project 2">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="rubber-lining" data-aos="zoom-in-up" data-aos-delay="200">
+                    <a data-fslightbox="gallery" href="images/gallery/rubber-lining-3.jpeg">
+                        <img src="images/gallery/rubber-lining-3.jpeg" alt="Rubber Lining Project 3">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="rubber-lining" data-aos="zoom-in-up">
+                    <a data-fslightbox="gallery" href="images/gallery/rubber-lining-4.jpeg">
+                        <img src="images/gallery/rubber-lining-4.jpeg" alt="Rubber Lining Project 4">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="rubber-lining" data-aos="zoom-in-up" data-aos-delay="100">
+                    <a data-fslightbox="gallery" href="images/gallery/rubber-lining-5.jpeg">
+                        <img src="images/gallery/rubber-lining-5.jpeg" alt="Rubber Lining Project 5">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="rubber-lining" data-aos="zoom-in-up" data-aos-delay="200">
+                    <a data-fslightbox="gallery" href="images/gallery/rubber-lining-6.jpeg">
+                        <img src="images/gallery/rubber-lining-6.jpeg" alt="Rubber Lining Project 6">
+                    </a>
+                </div>
+
+                <!-- Restoration / Pressure Grouting -->
+                <div class="gallery-item" data-category="restoration" data-aos="zoom-in-up">
+                    <a data-fslightbox="gallery" href="images/gallery/guniting-1.jpeg">
+                        <img src="images/gallery/guniting-1.jpeg" alt="Structural Guniting Project">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="restoration" data-aos="zoom-in-up" data-aos-delay="100">
+                    <a data-fslightbox="gallery" href="images/gallery/guniting-2.jpeg">
+                        <img src="images/gallery/guniting-2.jpeg" alt="Dam Reinforcement">
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="restoration" data-aos="zoom-in-up" data-aos-delay="200">
+                    <a data-fslightbox="gallery" href="images/gallery/guniting-3.jpeg">
+                        <img src="images/gallery/guniting-3.jpeg" alt="High Pressure Concrete Work">
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -152,39 +163,45 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-about">
+                <!-- Brand Column -->
+                <div class="footer-brand" data-aos="fade-up">
                     <a href="index.html" class="logo">M<span>E</span></a>
                     <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
-                    <div class="social-icons">
+                    <div class="footer-social">
                         <a href="#"><i data-lucide="facebook"></i></a>
                         <a href="#"><i data-lucide="twitter"></i></a>
-                        <a href="#"><i data-lucide="linkedin"></i></a>
                         <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
+
+                <!-- Quick Links Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="footer-title">Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">Civil Works</a></li>
-                        <li><a href="services.html">Rubber Lining</a></li>
-                        <li><a href="services.html">FRP Lining</a></li>
-                        <li><a href="services.html">Sand Blasting</a></li>
-                        <li><a href="services.html">Pressure Grouting</a></li>
+
+                <!-- Our Services Column -->
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul>
+                        <li><a href="rehabilitation-works.html">Civil Works</a></li>
+                        <li><a href="rubber-lining.html">Rubber Lining</a></li>
+                        <li><a href="frp-lining.html">FRP Lining</a></li>
+                        <li><a href="sand-blasting.html">Sand Blasting</a></li>
+                        <li><a href="guniting-grouting.html">Pressure Grouting</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="footer-title">Contact Us</h4>
-                    <ul class="contact-info">
+
+                <!-- Contact Us Column -->
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul>
                         <li>
                             <i data-lucide="map-pin"></i>
                             <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
@@ -200,8 +217,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 Mini Enterprises. All Rights Reserved. Designed for Excellence.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mini Enterprises. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Services</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -216,6 +238,7 @@
     <!-- FSLightbox Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="main.js"></script>
 </body>
 </html>
