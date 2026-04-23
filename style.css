@@ -495,7 +495,7 @@ nav ul li a.active::after {
 /* --- Section Headings --- */
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px; /* Reduced from 60px */
 }
 
 .section-header span {
@@ -563,9 +563,9 @@ nav ul li a.active::after {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 1fr 1fr; /* Balanced 1:1 ratio for larger images */
+  gap: 60px;
+  align-items: flex-start;
 }
 
 @media (max-width: 992px) {
@@ -577,7 +577,8 @@ nav ul li a.active::after {
 
 .about-img {
   position: relative;
-  max-width: 450px; /* Reduced size on desktop */
+  max-width: 550px; /* Increased from 450px for better desktop presence */
+  width: 100%;
   margin: 0 auto;
 }
 
