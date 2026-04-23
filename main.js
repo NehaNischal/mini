@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Initialize AOS with more dramatic settings
+    // Initialize AOS with optimized settings for both desktop and mobile
     AOS.init({
-        duration: 1100, // Slower, more elegant
-        offset: 100,    // More trigger distance
+        duration: 1000, 
+        offset: 50,     // Reduced offset for better mobile triggering
         once: true,
-        easing: 'ease-in-out-cubic',
+        disable: false, // Ensure it's never disabled on mobile
+        easing: 'ease-out-quad',
     });
 
     // Core Elements

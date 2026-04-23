@@ -8,8 +8,29 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        .service-hero {
+            height: 60vh;
+            background: linear-gradient(135deg, #020617 0%, #0a1f44 50%, #172554 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .service-hero h1 { font-size: 4rem; color: white; }
+        .content-section { padding: 80px 0; background: white; color: var(--primary); }
+        .content-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center; }
 
-        .content-section { padding: 100px 0; background: white; color: var(--primary); }
+        @media (max-width: 768px) {
+            .service-hero { height: 40vh; padding-top: 80px; }
+            .service-hero h1 { font-size: 2.2rem !important; }
+            .content-section { padding: 40px 0; }
+            .content-grid { grid-template-columns: 1fr; gap: 30px; }
+            .content-grid h2 { font-size: 2rem !important; margin-bottom: 20px !important; }
+            .content-grid p { font-size: 1rem !important; }
+            .about-img { order: -1; margin-bottom: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -41,10 +62,16 @@
     </div>
 
     <section class="content-section">
-        <div class="container">
-            <h2 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 25px;">Superior Chemical Resistance</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">Our FRP (Fiber Reinforced Plastic) lining provides a seamless, non-corrosive layer that is ideal for storage tanks containing aggressive chemicals. Our moulding division produces custom, durable components that offer a high strength-to-weight ratio for industrial use.</p>
-        </div>
+        <div class="container" data-aos="fade-up">
+            <div class="content-grid">
+                <div data-aos="fade-right">
+                    <h2 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 25px;">Superior Chemical Resistance</h2>
+                    <p style="font-size: 1.15rem; line-height: 1.8; color: var(--primary-light);">Our FRP (Fiber Reinforced Plastic) lining provides a seamless, non-corrosive layer that is ideal for storage tanks containing aggressive chemicals. Our moulding division produces custom, durable components that offer a high strength-to-weight ratio for industrial use.</p>
+                </div>
+                <div class="about-img" data-aos="fade-left">
+                    <img src="images/frp-lining.png" alt="FRP Lining Project" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 100%;">
+                </div>
+            </div>
     </section>
 
     <!-- Footer -->
@@ -55,12 +82,7 @@
                 <div class="footer-brand" data-aos="fade-up">
                     <a href="index.html" class="logo">M<span>E</span></a>
                     <p>A professionally managed engineering company with over 45 years of experience in civil construction and industrial protective works.</p>
-                    <div class="footer-social">
-                        <a href="#"><i data-lucide="facebook"></i></a>
-                        <a href="#"><i data-lucide="twitter"></i></a>
-                        <a href="#"><i data-lucide="instagram"></i></a>
-                        <a href="#"><i data-lucide="linkedin"></i></a>
-                    </div>
+                    
                 </div>
 
                 <!-- Quick Links Column -->
@@ -78,11 +100,11 @@
                 <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="footer-title">Our Services</h3>
                     <ul>
-                        <li><a href="rehabilitation-works.html">Civil Works</a></li>
                         <li><a href="rubber-lining.html">Rubber Lining</a></li>
-                        <li><a href="frp-lining.html">FRP Lining</a></li>
+                        <li><a href="guniting-grouting.html">Guniting</a></li>
                         <li><a href="sand-blasting.html">Sand Blasting</a></li>
-                        <li><a href="guniting-grouting.html">Pressure Grouting</a></li>
+                        <li><a href="frp-lining.html">FRP Lining & Moulding</a></li>
+                        <li><a href="rehabilitation-works.html">Civil Rehabilitation</a></li>
                     </ul>
                 </div>
 
@@ -92,15 +114,20 @@
                     <ul>
                         <li>
                             <i data-lucide="map-pin"></i>
-                            <span>Tollgate, Edapally, Kochi – 682024, Kerala, India</span>
+                            <a href="https://maps.google.com/?q=Mini+Enterprises+Edapally+Tollgate+Kochi" target="_blank">Tollgate, Edapally, Kochi – 682024, Kerala, India</a>
                         </li>
                         <li>
                             <i data-lucide="mail"></i>
-                            <span>minienterps@gmail.com</span>
+                            <a href="mailto:minienterps@gmail.com">minienterps@gmail.com</a>
                         </li>
+
                         <li>
                             <i data-lucide="phone"></i>
-                            <span>+91 984 624 3535</span>
+                            <a href="tel:+919447603445" style="margin: 0; line-height: 1.2;">+91 944 760 3445</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="color: #25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <a href="tel:+918891886311" style="margin: 0; line-height: 1.2;">+91 889 188 6311</a>
                         </li>
                     </ul>
                 </div>
@@ -113,10 +140,24 @@
                     <a href="#">Terms of Services</a>
                 </div>
             </div>
+            <div class="developer-link">
+                <a href="https://www.instagram.com/intellex.web?igsh=MWZyenU0bWc3M2RxOQ==" target="_blank">
+                    Meet the Developers <i data-lucide="instagram"></i>
+                </a>
+            </div>
         </div>
     </footer>
+
+    <!-- Floating Buttons -->
+
+    <button class="back-to-top" id="backToTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
+
+
+
