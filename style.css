@@ -533,6 +533,11 @@ nav ul li a.active::after {
   background-color: var(--accent);
 }
 
+.section-header h2.left-aligned::after {
+  left: 0;
+  transform: none;
+}
+
 /* --- About Section --- */
 .service-content-grid {
     display: grid;
@@ -556,35 +561,43 @@ nav ul li a.active::after {
     }
 }
 
-.about-img {
-  position: relative;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 
 .about-img {
-  perspective: 1000px; /* Enable 3D space */
+  position: relative;
+  max-width: 450px; /* Reduced size on desktop */
+  margin: 0 auto;
 }
 
 .about-img img {
-  border-radius: 8px;
-  box-shadow: 20px 20px 0 var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  animation: floatCard 6s ease-in-out infinite, glowPulse 4s ease-in-out infinite;
+  animation: floatCard 6s ease-in-out infinite;
+  border-right: 8px solid var(--accent);
+  border-bottom: 8px solid var(--accent);
 }
 
 @keyframes floatCard {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-15px) rotate(1deg); }
-  66% { transform: translateY(-5px) rotate(-1deg); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
 .about-img:hover img {
-  transform: rotateY(-15deg) rotateX(5deg) scale(1.05);
-  box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.4), 10px 10px 0 var(--accent);
-}
-
-@keyframes glowPulse {
-  0%, 100% { box-shadow: 20px 20px 0 var(--accent); }
-  50% { box-shadow: 20px 20px 30px var(--accent); }
+  transform: scale(1.02);
+  box-shadow: 0 30px 60px rgba(255, 96, 0, 0.2);
 }
 
 .about-img::after {
