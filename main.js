@@ -177,11 +177,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
                 
-                // Refresh Lightbox if needed (fslightbox usually handles it or might need refresh)
+                
+                // Refresh Lightbox if needed
                 if (window.refreshFsLightbox) {
                     window.refreshFsLightbox();
                 }
             });
+        });
+    }
+
+    // Contact Form Handler (Fixes 405 Error)
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message received! (This is currently a simulation. Connect EmailJS to send real emails.)');
+            contactForm.reset();
         });
     }
 });
